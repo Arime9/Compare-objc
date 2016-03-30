@@ -202,3 +202,110 @@ void description(id obj) {
         DLog(@"%@ responds to selector of bMethod.", className);
     }
 }
+
+/**
+ 2016-03-30 17:05:21.776 Compare-objc[51082:2277081] ================ nil object ================
+ 2016-03-30 17:05:21.777 Compare-objc[51082:2277081] void description(__strong id) [Line 152] (null) is not equal (null)
+ 2016-03-30 17:05:21.777 Compare-objc[51082:2277081] void description(__strong id) [Line 162] (null) is (null)
+ 2016-03-30 17:05:21.777 Compare-objc[51082:2277081] void description(__strong id) [Line 152] (null) is not equal (null)
+ 2016-03-30 17:05:21.777 Compare-objc[51082:2277081] void description(__strong id) [Line 162] (null) is (null)
+ 2016-03-30 17:05:21.777 Compare-objc[51082:2277081] void description(__strong id) [Line 152] (null) is not equal (null)
+ 2016-03-30 17:05:21.778 Compare-objc[51082:2277081] void description(__strong id) [Line 162] (null) is (null)
+ 2016-03-30 17:05:21.778 Compare-objc[51082:2277081] void description(__strong id) [Line 152] (null) is not equal (null)
+ 2016-03-30 17:05:21.778 Compare-objc[51082:2277081] void description(__strong id) [Line 162] (null) is (null)
+ 2016-03-30 17:05:21.778 Compare-objc[51082:2277081] ================ alloc Object ================
+ 2016-03-30 17:05:21.778 Compare-objc[51082:2277081] void description(__strong id) [Line 74] NSObject is kind of NSObject
+ 2016-03-30 17:05:21.778 Compare-objc[51082:2277081] void description(__strong id) [Line 93] NSObject is member of NSObject
+ 2016-03-30 17:05:21.778 Compare-objc[51082:2277081] void description(__strong id) [Line 112] NSObject is subclass of NSObject
+ 2016-03-30 17:05:21.832 Compare-objc[51082:2277081] void description(__strong id) [Line 131] NSObject is NSObject
+ 2016-03-30 17:05:21.832 Compare-objc[51082:2277081] void description(__strong id) [Line 150] NSObject is equal NSObject
+ 2016-03-30 17:05:21.832 Compare-objc[51082:2277081] void description(__strong id) [Line 162] NSObject is NSObject
+ 2016-03-30 17:05:21.832 Compare-objc[51082:2277081] void description(__strong id) [Line 174] NSObject conforms to protocol of NSObject.
+ 2016-03-30 17:05:21.832 Compare-objc[51082:2277081] void description(__strong id) [Line 193] NSObject responds to selector of hash.
+ 2016-03-30 17:05:21.832 Compare-objc[51082:2277081] void description(__strong id) [Line 74] NSPlaceholderString is kind of NSObject
+ 2016-03-30 17:05:21.832 Compare-objc[51082:2277081] void description(__strong id) [Line 77] NSPlaceholderString is kind of NSString
+ 2016-03-30 17:05:21.832 Compare-objc[51082:2277081] void description(__strong id) [Line 112] NSPlaceholderString is subclass of NSObject
+ 2016-03-30 17:05:21.859 Compare-objc[51082:2277081] void description(__strong id) [Line 115] NSPlaceholderString is subclass of NSString
+ 2016-03-30 17:05:21.859 Compare-objc[51082:2277081] void description(__strong id) [Line 150] NSPlaceholderString is equal NSPlaceholderString
+ 2016-03-30 17:05:21.859 Compare-objc[51082:2277081] void description(__strong id) [Line 162] NSPlaceholderString is NSPlaceholderString
+ 2016-03-30 17:05:21.859 Compare-objc[51082:2277081] void description(__strong id) [Line 174] NSPlaceholderString conforms to protocol of NSObject.
+ 2016-03-30 17:05:21.860 Compare-objc[51082:2277081] void description(__strong id) [Line 177] NSPlaceholderString conforms to protocol of NSCopying and NSMutableCopying, NSSecureCoding.
+ 2016-03-30 17:05:21.860 Compare-objc[51082:2277081] void description(__strong id) [Line 193] NSPlaceholderString responds to selector of hash.
+ 2016-03-30 17:05:21.860 Compare-objc[51082:2277081] void description(__strong id) [Line 196] NSPlaceholderString responds to selector of length.
+ 2016-03-30 17:05:21.874 Compare-objc[51082:2277081] void description(__strong id) [Line 74] AObject is kind of NSObject
+ 2016-03-30 17:05:21.874 Compare-objc[51082:2277081] void description(__strong id) [Line 80] AObject is kind of AObject
+ 2016-03-30 17:05:21.874 Compare-objc[51082:2277081] void description(__strong id) [Line 99] AObject is member of AObject
+ 2016-03-30 17:05:21.875 Compare-objc[51082:2277081] void description(__strong id) [Line 112] AObject is subclass of NSObject
+ 2016-03-30 17:05:21.875 Compare-objc[51082:2277081] void description(__strong id) [Line 118] AObject is subclass of AObject
+ 2016-03-30 17:05:21.875 Compare-objc[51082:2277081] void description(__strong id) [Line 137] AObject is AObject
+ 2016-03-30 17:05:21.875 Compare-objc[51082:2277081] void description(__strong id) [Line 150] AObject is equal AObject
+ 2016-03-30 17:05:21.875 Compare-objc[51082:2277081] void description(__strong id) [Line 162] AObject is AObject
+ 2016-03-30 17:05:21.875 Compare-objc[51082:2277081] void description(__strong id) [Line 174] AObject conforms to protocol of NSObject.
+ 2016-03-30 17:05:21.875 Compare-objc[51082:2277081] void description(__strong id) [Line 180] AObject conforms to protocol of AProtocol.
+ 2016-03-30 17:05:21.875 Compare-objc[51082:2277081] void description(__strong id) [Line 193] AObject responds to selector of hash.
+ 2016-03-30 17:05:21.876 Compare-objc[51082:2277081] void description(__strong id) [Line 199] AObject responds to selector of aMethod.
+ 2016-03-30 17:05:21.876 Compare-objc[51082:2277081] void description(__strong id) [Line 74] BObject is kind of NSObject
+ 2016-03-30 17:05:21.876 Compare-objc[51082:2277081] void description(__strong id) [Line 80] BObject is kind of AObject
+ 2016-03-30 17:05:21.876 Compare-objc[51082:2277081] void description(__strong id) [Line 83] BObject is kind of BObject
+ 2016-03-30 17:05:21.876 Compare-objc[51082:2277081] void description(__strong id) [Line 102] BObject is member of BObject
+ 2016-03-30 17:05:21.876 Compare-objc[51082:2277081] void description(__strong id) [Line 112] BObject is subclass of NSObject
+ 2016-03-30 17:05:21.881 Compare-objc[51082:2277081] void description(__strong id) [Line 118] BObject is subclass of AObject
+ 2016-03-30 17:05:21.881 Compare-objc[51082:2277081] void description(__strong id) [Line 121] BObject is subclass of BObject
+ 2016-03-30 17:05:21.881 Compare-objc[51082:2277081] void description(__strong id) [Line 140] BObject is BObject
+ 2016-03-30 17:05:21.881 Compare-objc[51082:2277081] void description(__strong id) [Line 150] BObject is equal BObject
+ 2016-03-30 17:05:21.881 Compare-objc[51082:2277081] void description(__strong id) [Line 162] BObject is BObject
+ 2016-03-30 17:05:21.881 Compare-objc[51082:2277081] void description(__strong id) [Line 174] BObject conforms to protocol of NSObject.
+ 2016-03-30 17:05:21.881 Compare-objc[51082:2277081] void description(__strong id) [Line 180] BObject conforms to protocol of AProtocol.
+ 2016-03-30 17:05:21.881 Compare-objc[51082:2277081] void description(__strong id) [Line 183] BObject conforms to protocol of BProtocol.
+ 2016-03-30 17:05:21.882 Compare-objc[51082:2277081] void description(__strong id) [Line 193] BObject responds to selector of hash.
+ 2016-03-30 17:05:21.883 Compare-objc[51082:2277081] void description(__strong id) [Line 199] BObject responds to selector of aMethod.
+ 2016-03-30 17:05:21.883 Compare-objc[51082:2277081] void description(__strong id) [Line 202] BObject responds to selector of bMethod.
+ 2016-03-30 17:05:21.883 Compare-objc[51082:2277081] ================ initialize Object ================
+ 2016-03-30 17:05:21.883 Compare-objc[51082:2277081] void description(__strong id) [Line 74] NSObject is kind of NSObject
+ 2016-03-30 17:05:21.883 Compare-objc[51082:2277081] void description(__strong id) [Line 93] NSObject is member of NSObject
+ 2016-03-30 17:05:21.883 Compare-objc[51082:2277081] void description(__strong id) [Line 112] NSObject is subclass of NSObject
+ 2016-03-30 17:05:21.883 Compare-objc[51082:2277081] void description(__strong id) [Line 131] NSObject is NSObject
+ 2016-03-30 17:05:21.883 Compare-objc[51082:2277081] void description(__strong id) [Line 150] NSObject is equal NSObject
+ 2016-03-30 17:05:21.900 Compare-objc[51082:2277081] void description(__strong id) [Line 162] NSObject is NSObject
+ 2016-03-30 17:05:21.900 Compare-objc[51082:2277081] void description(__strong id) [Line 174] NSObject conforms to protocol of NSObject.
+ 2016-03-30 17:05:21.900 Compare-objc[51082:2277081] void description(__strong id) [Line 193] NSObject responds to selector of hash.
+ 2016-03-30 17:05:21.900 Compare-objc[51082:2277081] void description(__strong id) [Line 74] __NSCFConstantString is kind of NSObject
+ 2016-03-30 17:05:21.901 Compare-objc[51082:2277081] void description(__strong id) [Line 77] __NSCFConstantString is kind of NSString
+ 2016-03-30 17:05:21.901 Compare-objc[51082:2277081] void description(__strong id) [Line 112] __NSCFConstantString is subclass of NSObject
+ 2016-03-30 17:05:21.901 Compare-objc[51082:2277081] void description(__strong id) [Line 115] __NSCFConstantString is subclass of NSString
+ 2016-03-30 17:05:21.901 Compare-objc[51082:2277081] void description(__strong id) [Line 150] __NSCFConstantString is equal __NSCFConstantString
+ 2016-03-30 17:05:21.925 Compare-objc[51082:2277081] void description(__strong id) [Line 162] __NSCFConstantString is __NSCFConstantString
+ 2016-03-30 17:05:21.925 Compare-objc[51082:2277081] void description(__strong id) [Line 174] __NSCFConstantString conforms to protocol of NSObject.
+ 2016-03-30 17:05:21.925 Compare-objc[51082:2277081] void description(__strong id) [Line 177] __NSCFConstantString conforms to protocol of NSCopying and NSMutableCopying, NSSecureCoding.
+ 2016-03-30 17:05:21.925 Compare-objc[51082:2277081] void description(__strong id) [Line 193] __NSCFConstantString responds to selector of hash.
+ 2016-03-30 17:05:21.928 Compare-objc[51082:2277081] void description(__strong id) [Line 196] __NSCFConstantString responds to selector of length.
+ 2016-03-30 17:05:21.931 Compare-objc[51082:2277081] void description(__strong id) [Line 74] AObject is kind of NSObject
+ 2016-03-30 17:05:21.931 Compare-objc[51082:2277081] void description(__strong id) [Line 80] AObject is kind of AObject
+ 2016-03-30 17:05:21.931 Compare-objc[51082:2277081] void description(__strong id) [Line 99] AObject is member of AObject
+ 2016-03-30 17:05:21.932 Compare-objc[51082:2277081] void description(__strong id) [Line 112] AObject is subclass of NSObject
+ 2016-03-30 17:05:21.932 Compare-objc[51082:2277081] void description(__strong id) [Line 118] AObject is subclass of AObject
+ 2016-03-30 17:05:21.969 Compare-objc[51082:2277081] void description(__strong id) [Line 137] AObject is AObject
+ 2016-03-30 17:05:21.969 Compare-objc[51082:2277081] void description(__strong id) [Line 150] AObject is equal AObject
+ 2016-03-30 17:05:21.969 Compare-objc[51082:2277081] void description(__strong id) [Line 162] AObject is AObject
+ 2016-03-30 17:05:21.969 Compare-objc[51082:2277081] void description(__strong id) [Line 174] AObject conforms to protocol of NSObject.
+ 2016-03-30 17:05:21.969 Compare-objc[51082:2277081] void description(__strong id) [Line 180] AObject conforms to protocol of AProtocol.
+ 2016-03-30 17:05:21.969 Compare-objc[51082:2277081] void description(__strong id) [Line 193] AObject responds to selector of hash.
+ 2016-03-30 17:05:21.969 Compare-objc[51082:2277081] void description(__strong id) [Line 199] AObject responds to selector of aMethod.
+ 2016-03-30 17:05:21.969 Compare-objc[51082:2277081] void description(__strong id) [Line 74] BObject is kind of NSObject
+ 2016-03-30 17:05:21.970 Compare-objc[51082:2277081] void description(__strong id) [Line 80] BObject is kind of AObject
+ 2016-03-30 17:05:21.970 Compare-objc[51082:2277081] void description(__strong id) [Line 83] BObject is kind of BObject
+ 2016-03-30 17:05:21.970 Compare-objc[51082:2277081] void description(__strong id) [Line 102] BObject is member of BObject
+ 2016-03-30 17:05:21.970 Compare-objc[51082:2277081] void description(__strong id) [Line 112] BObject is subclass of NSObject
+ 2016-03-30 17:05:21.970 Compare-objc[51082:2277081] void description(__strong id) [Line 118] BObject is subclass of AObject
+ 2016-03-30 17:05:21.970 Compare-objc[51082:2277081] void description(__strong id) [Line 121] BObject is subclass of BObject
+ 2016-03-30 17:05:21.970 Compare-objc[51082:2277081] void description(__strong id) [Line 140] BObject is BObject
+ 2016-03-30 17:05:21.970 Compare-objc[51082:2277081] void description(__strong id) [Line 150] BObject is equal BObject
+ 2016-03-30 17:05:21.970 Compare-objc[51082:2277081] void description(__strong id) [Line 162] BObject is BObject
+ 2016-03-30 17:05:21.970 Compare-objc[51082:2277081] void description(__strong id) [Line 174] BObject conforms to protocol of NSObject.
+ 2016-03-30 17:05:21.972 Compare-objc[51082:2277081] void description(__strong id) [Line 180] BObject conforms to protocol of AProtocol.
+ 2016-03-30 17:05:21.972 Compare-objc[51082:2277081] void description(__strong id) [Line 183] BObject conforms to protocol of BProtocol.
+ 2016-03-30 17:05:21.972 Compare-objc[51082:2277081] void description(__strong id) [Line 193] BObject responds to selector of hash.
+ 2016-03-30 17:05:21.972 Compare-objc[51082:2277081] void description(__strong id) [Line 199] BObject responds to selector of aMethod.
+ 2016-03-30 17:05:21.972 Compare-objc[51082:2277081] void description(__strong id) [Line 202] BObject responds to selector of bMethod.
+ Program ended with exit code: 0
+ */
