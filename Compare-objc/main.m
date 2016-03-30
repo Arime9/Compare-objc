@@ -67,6 +67,9 @@ void description(id obj) {
     
 #pragma mark [NSObject isKindOfClass]
     
+    // EN: An instance of given class or an instance of any class that inherits from that class.
+    // JP: 指定したクラスのインスタンスまたは、そのクラスを継承するクラスのインスタンス
+    
     if ([obj isKindOfClass:[NSObject class]]) {
         DLog(@"%@ is kind of NSObject", className);
     }
@@ -82,6 +85,9 @@ void description(id obj) {
     
     
 #pragma mark [NSObject isMemberOfClass]
+    
+    // EN: An instance of a given class.
+    // JP: 指定したクラスのインスタンス
     
     if ([obj isMemberOfClass:[NSObject class]]) {
         DLog(@"%@ is member of NSObject", className);
@@ -99,6 +105,9 @@ void description(id obj) {
     
 #pragma mark [NSObject isSubclassOfClass]
     
+    // EN: A subclass of, or identical to, a given class.
+    // JP: サブクラスまたは、同一の指定したクラス
+    
     if ([[obj class] isSubclassOfClass:[NSObject class]]) {
         DLog(@"%@ is subclass of NSObject", className);
     }
@@ -115,7 +124,9 @@ void description(id obj) {
     
 #pragma mark [NSObject class] == [NSObject class]
     
-    // Compare class object. クラスオブジェクトで比較する
+    // EN: Identical to, a given class.
+    // JP: 同一の指定したクラス
+    
     if ([obj class] == [NSObject class]) {
         DLog(@"%@ is NSObject", className);
     }
