@@ -186,20 +186,36 @@ void description(id obj) {
     
 #pragma mark [NSObject respondsToSelector:]
     
-    // EN: Whether the receiver implements or inherits a method.
-    // JP: メソッドを実装または継承しているか
+    // EN: Whether the receiver implements or inherits a class method.
+    // JP: クラスメソッドを実装または継承しているか
+    
+    if ([[obj class] respondsToSelector:@selector(copy)]) {
+        DLog(@"%@ responds to selector of (class method) copy.", className);
+    }
+    if ([[obj class] respondsToSelector:@selector(length)]) {
+        DLog(@"%@ responds to selector of (class method) length.", className);
+    }
+    if ([[obj class] respondsToSelector:@selector(aMethod)]) {
+        DLog(@"%@ responds to selector of (class method) aMethod.", className);
+    }
+    if ([[obj class] respondsToSelector:@selector(bMethod)]) {
+        DLog(@"%@ responds to selector of (class method) bMethod.", className);
+    }
+    
+    // EN: Whether the receiver implements or inherits a instance method.
+    // JP: インスタンスメソッドを実装または継承しているか
     
     if ([obj respondsToSelector:@selector(copy)]) {
-        DLog(@"%@ responds to selector of copy.", className);
+        DLog(@"%@ responds to selector of (instance method) copy.", className);
     }
     if ([obj respondsToSelector:@selector(length)]) {
-        DLog(@"%@ responds to selector of length.", className);
+        DLog(@"%@ responds to selector of (instance method) length.", className);
     }
     if ([obj respondsToSelector:@selector(aMethod)]) {
-        DLog(@"%@ responds to selector of aMethod.", className);
+        DLog(@"%@ responds to selector of (instance method) aMethod.", className);
     }
     if ([obj respondsToSelector:@selector(bMethod)]) {
-        DLog(@"%@ responds to selector of bMethod.", className);
+        DLog(@"%@ responds to selector of (instance method) bMethod.", className);
     }
 }
 
