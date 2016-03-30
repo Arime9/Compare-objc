@@ -65,7 +65,7 @@ int main(int argc, const char * argv[]) {
 void description(id obj) {
     NSString *className = NSStringFromClass([obj class]);
     
-#pragma mark [NSObject isKindOfClass]
+#pragma mark [NSObject isKindOfClass:]
     
     // EN: An instance of given class or an instance of any class that inherits from that class.
     // JP: 指定したクラスのインスタンスまたは、そのクラスを継承するクラスのインスタンス
@@ -84,7 +84,7 @@ void description(id obj) {
     }
     
     
-#pragma mark [NSObject isMemberOfClass]
+#pragma mark [NSObject isMemberOfClass:]
     
     // EN: An instance of a given class.
     // JP: 指定したクラスのインスタンス
@@ -103,7 +103,7 @@ void description(id obj) {
     }
     
     
-#pragma mark [NSObject isSubclassOfClass]
+#pragma mark [NSObject isSubclassOfClass:]
     
     // EN: A subclass of, or identical to, a given class.
     // JP: サブクラスまたは、同一の指定したクラス
@@ -124,8 +124,8 @@ void description(id obj) {
     
 #pragma mark [NSObject class] == [NSObject class]
     
-    // EN: Identical to, a given class.
-    // JP: 同一の指定したクラス
+    // EN: Compare of the class object.
+    // JP: クラスオブジェクトの比較
     
     if ([obj class] == [NSObject class]) {
         DLog(@"%@ is NSObject", className);
@@ -138,5 +138,29 @@ void description(id obj) {
     }
     if ([obj class] == [BObject class]) {
         DLog(@"%@ is BObject", className);
+    }
+    
+    
+#pragma mark [NSObject isEqual:]
+    
+    // EN: Compare of the instance.
+    // JP: インスタンスの比較
+    
+    if ([obj isEqual:obj]) {
+        DLog(@"%@ is equal %@", className, className);
+    } else {
+        DLog(@"%@ is not equal %@", className, className);
+    }
+    
+    
+#pragma mark instance == instance
+    
+    // EN: Compare of the instance.
+    // JP: インスタンスの比較
+    
+    if (obj == obj) {
+        DLog(@"%@ is %@", className, className);
+    } else {
+        DLog(@"%@ is not %@", className, className);
     }
 }
