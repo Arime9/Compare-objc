@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		26561EB21CAB743500797F7B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 26561EB11CAB743500797F7B /* main.m */; };
+		26561EBD1CAB75BB00797F7B /* AObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 26561EBC1CAB75BB00797F7B /* AObject.m */; };
+		26561EC01CAB75D000797F7B /* BObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 26561EBF1CAB75D000797F7B /* BObject.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +27,11 @@
 /* Begin PBXFileReference section */
 		26561EAE1CAB743500797F7B /* Compare-objc */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Compare-objc"; sourceTree = BUILT_PRODUCTS_DIR; };
 		26561EB11CAB743500797F7B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		26561EBB1CAB75BB00797F7B /* AObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AObject.h; sourceTree = "<group>"; };
+		26561EBC1CAB75BB00797F7B /* AObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AObject.m; sourceTree = "<group>"; };
+		26561EBE1CAB75D000797F7B /* BObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BObject.h; sourceTree = "<group>"; };
+		26561EBF1CAB75D000797F7B /* BObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BObject.m; sourceTree = "<group>"; };
+		26561EC11CAB75F500797F7B /* DebugLog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DebugLog.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +65,11 @@
 			isa = PBXGroup;
 			children = (
 				26561EB11CAB743500797F7B /* main.m */,
+				26561EBB1CAB75BB00797F7B /* AObject.h */,
+				26561EBC1CAB75BB00797F7B /* AObject.m */,
+				26561EBE1CAB75D000797F7B /* BObject.h */,
+				26561EBF1CAB75D000797F7B /* BObject.m */,
+				26561EC11CAB75F500797F7B /* DebugLog.h */,
 			);
 			path = "Compare-objc";
 			sourceTree = "<group>";
@@ -118,6 +130,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26561EBD1CAB75BB00797F7B /* AObject.m in Sources */,
+				26561EC01CAB75D000797F7B /* BObject.m in Sources */,
 				26561EB21CAB743500797F7B /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -237,6 +251,7 @@
 				26561EB71CAB743500797F7B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
