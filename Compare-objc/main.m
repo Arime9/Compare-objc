@@ -143,8 +143,8 @@ void description(id obj) {
     
 #pragma mark [NSObject isEqual:]
     
-    // EN: Compare of the instance.
-    // JP: インスタンスの比較
+    // EN: Compare of the instance by "isEqual".
+    // JP: "isEqual"によるインスタンスの比較
     
     if ([obj isEqual:obj]) {
         DLog(@"%@ is equal %@", className, className);
@@ -155,8 +155,8 @@ void description(id obj) {
     
 #pragma mark instance == instance
     
-    // EN: Compare of the instance.
-    // JP: インスタンスの比較
+    // EN: Compare of the instance by "==".
+    // JP: "=="によるインスタンスの比較
     
     if (obj == obj) {
         DLog(@"%@ is %@", className, className);
@@ -187,7 +187,7 @@ void description(id obj) {
 #pragma mark [NSObject respondsToSelector:]
     
     // EN: Whether the receiver implements or inherits a method.
-    // JP: メソッドが実装または継承しているか
+    // JP: メソッドを実装または継承しているか
     
     if ([obj respondsToSelector:@selector(hash)]) {
         DLog(@"%@ responds to selector of hash.", className);
