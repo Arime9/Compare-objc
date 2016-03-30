@@ -10,4 +10,7 @@
 
 @implementation BObject
 
+- (void)bMethod {
+}
+
 @end

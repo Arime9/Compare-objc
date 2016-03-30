@@ -10,4 +10,7 @@
 
 @implementation AObject
 
+- (void)aMethod {
+}
+
 @end

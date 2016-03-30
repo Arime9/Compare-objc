@@ -8,6 +8,12 @@
 
 #import "AObject.h"
 
-@interface BObject : AObject
+@protocol BProtocol <NSObject>
+
+@end
+
+@interface BObject : AObject <BProtocol>
+
+- (void)bMethod;
 
 @end

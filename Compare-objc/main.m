@@ -17,7 +17,7 @@ int main(int argc, const char * argv[]) {
     @autoreleasepool {
         NSLog(@"================ nil object ================");
         
-        id obj_a1;
+        NSObject *obj_a1;
         description(obj_a1);
         
         NSString *obj_a2;
@@ -32,7 +32,7 @@ int main(int argc, const char * argv[]) {
         
         NSLog(@"================ alloc Object ================");
         
-        id obj_b1 = [NSObject alloc];
+        NSObject *obj_b1 = [NSObject alloc];
         description(obj_b1);
         
         NSString *obj_b2 = [NSString alloc];
@@ -47,7 +47,7 @@ int main(int argc, const char * argv[]) {
         
         NSLog(@"================ initialize Object ================");
         
-        id obj_c1 = [NSObject new];
+        NSObject *obj_c1 = [NSObject new];
         description(obj_c1);
         
         NSString *obj_c2 = [NSString string];
@@ -162,5 +162,43 @@ void description(id obj) {
         DLog(@"%@ is %@", className, className);
     } else {
         DLog(@"%@ is not %@", className, className);
+    }
+    
+    
+#pragma mark [NSObject conformsToProtocol:]
+    
+    // EN: Whether the receiver conforms to a given protocol.
+    // JP: プロトコルに順応しているか
+    
+    if ([obj conformsToProtocol:@protocol(NSObject)]) {
+        DLog(@"%@ conforms to protocol of NSObject.", className);
+    }
+    if ([obj conformsToProtocol:@protocol(NSCopying)] && [obj conformsToProtocol:@protocol(NSMutableCopying)] && [obj conformsToProtocol:@protocol(NSSecureCoding)]) {
+        DLog(@"%@ conforms to protocol of NSCopying and NSMutableCopying, NSSecureCoding.", className);
+    }
+    if ([obj conformsToProtocol:@protocol(AProtocol)]) {
+        DLog(@"%@ conforms to protocol of AProtocol.", className);
+    }
+    if ([obj conformsToProtocol:@protocol(BProtocol)]) {
+        DLog(@"%@ conforms to protocol of BProtocol.", className);
+    }
+    
+    
+#pragma mark [NSObject respondsToSelector:]
+    
+    // EN: Whether the receiver implements or inherits a method.
+    // JP: メソッドが実装または継承しているか
+    
+    if ([obj respondsToSelector:@selector(hash)]) {
+        DLog(@"%@ responds to selector of hash.", className);
+    }
+    if ([obj respondsToSelector:@selector(length)]) {
+        DLog(@"%@ responds to selector of length.", className);
+    }
+    if ([obj respondsToSelector:@selector(aMethod)]) {
+        DLog(@"%@ responds to selector of aMethod.", className);
+    }
+    if ([obj respondsToSelector:@selector(bMethod)]) {
+        DLog(@"%@ responds to selector of bMethod.", className);
     }
 }

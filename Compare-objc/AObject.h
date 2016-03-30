@@ -8,6 +8,12 @@
 
 #import <Foundation/Foundation.h>
 
-@interface AObject : NSObject
+@protocol AProtocol <NSObject>
+
+@end
+
+@interface AObject : NSObject <AProtocol>
+
+- (void)aMethod;
 
 @end
