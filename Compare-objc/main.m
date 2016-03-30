@@ -189,8 +189,8 @@ void description(id obj) {
     // EN: Whether the receiver implements or inherits a method.
     // JP: メソッドを実装または継承しているか
     
-    if ([obj respondsToSelector:@selector(hash)]) {
-        DLog(@"%@ responds to selector of hash.", className);
+    if ([obj respondsToSelector:@selector(copy)]) {
+        DLog(@"%@ responds to selector of copy.", className);
     }
     if ([obj respondsToSelector:@selector(length)]) {
         DLog(@"%@ responds to selector of length.", className);
