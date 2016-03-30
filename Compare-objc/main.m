@@ -15,72 +15,101 @@ void description(id obj);
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        id obj;
-        //        NSString *obj;
-        //        AObject *obj;
-        //        BObject *obj;
-        //
-        //        id obj = [NSObject alloc];
-        //        NSString *obj = [NSString alloc];
-        //        AObject *obj = [AObject alloc];
-        //        BObject *obj = [BObject alloc];
-        //
-        //        id obj = [NSObject new];
-        //        NSString *obj = [NSString string];
-        //        AObject *obj = [AObject new];
-        //        BObject *obj = [BObject new];
+        NSLog(@"================ nil object ================");
         
-        description(obj);
+        id obj_a1;
+        description(obj_a1);
+        
+        NSString *obj_a2;
+        description(obj_a2);
+        
+        AObject *obj_a3;
+        description(obj_a3);
+        
+        BObject *obj_a4;
+        description(obj_a4);
+        
+        
+        NSLog(@"================ alloc Object ================");
+        
+        id obj_b1 = [NSObject alloc];
+        description(obj_b1);
+        
+        NSString *obj_b2 = [NSString alloc];
+        description(obj_b2);
+        
+        AObject *obj_b3 = [AObject alloc];
+        description(obj_b3);
+        
+        BObject *obj_b4 = [BObject alloc];
+        description(obj_b4);
+        
+        
+        NSLog(@"================ initialize Object ================");
+        
+        id obj_c1 = [NSObject new];
+        description(obj_c1);
+        
+        NSString *obj_c2 = [NSString string];
+        description(obj_c2);
+        
+        AObject *obj_c3 = [AObject new];
+        description(obj_c3);
+        
+        BObject *obj_c4 = [BObject new];
+        description(obj_c4);
     }
     return 0;
 }
 
 void description(id obj) {
+    NSString *className = NSStringFromClass([obj class]);
+    
 #pragma mark [NSObject isKindOfClass]
     
     if ([obj isKindOfClass:[NSObject class]]) {
-        DLog(@"obj is kind of NSObject");
+        DLog(@"%@ is kind of NSObject", className);
     }
     if ([obj isKindOfClass:[NSString class]]) {
-        DLog(@"obj is kind of NSString");
+        DLog(@"%@ is kind of NSString", className);
     }
     if ([obj isKindOfClass:[AObject class]]) {
-        DLog(@"obj is kind of AObject");
+        DLog(@"%@ is kind of AObject", className);
     }
     if ([obj isKindOfClass:[BObject class]]) {
-        DLog(@"obj is kind of BObject");
+        DLog(@"%@ is kind of BObject", className);
     }
     
     
 #pragma mark [NSObject isMemberOfClass]
     
     if ([obj isMemberOfClass:[NSObject class]]) {
-        DLog(@"obj is member of NSObject");
+        DLog(@"%@ is member of NSObject", className);
     }
     if ([obj isMemberOfClass:[NSString class]]) {
-        DLog(@"obj is member of NSString");
+        DLog(@"%@ is member of NSString", className);
     }
     if ([obj isMemberOfClass:[AObject class]]) {
-        DLog(@"obj is member of AObject");
+        DLog(@"%@ is member of AObject", className);
     }
     if ([obj isMemberOfClass:[BObject class]]) {
-        DLog(@"obj is member of BObject");
+        DLog(@"%@ is member of BObject", className);
     }
     
     
 #pragma mark [NSObject isSubclassOfClass]
     
     if ([[obj class] isSubclassOfClass:[NSObject class]]) {
-        DLog(@"obj is subclass of NSObject");
+        DLog(@"%@ is subclass of NSObject", className);
     }
     if ([[obj class] isSubclassOfClass:[NSString class]]) {
-        DLog(@"obj is subclass of NSString");
+        DLog(@"%@ is subclass of NSString", className);
     }
     if ([[obj class] isSubclassOfClass:[AObject class]]) {
-        DLog(@"obj is subclass of AObject");
+        DLog(@"%@ is subclass of AObject", className);
     }
     if ([[obj class] isSubclassOfClass:[BObject class]]) {
-        DLog(@"obj is subclass of BObject");
+        DLog(@"%@ is subclass of BObject", className);
     }
     
     
@@ -88,15 +117,15 @@ void description(id obj) {
     
     // Compare class object. クラスオブジェクトで比較する
     if ([obj class] == [NSObject class]) {
-        DLog(@"obj is NSObject");
+        DLog(@"%@ is NSObject", className);
     }
     if ([obj class] == [NSString class]) {
-        DLog(@"obj is NSString");
+        DLog(@"%@ is NSString", className);
     }
     if ([obj class] == [AObject class]) {
-        DLog(@"obj is AObject");
+        DLog(@"%@ is AObject", className);
     }
     if ([obj class] == [BObject class]) {
-        DLog(@"obj is BObject");
+        DLog(@"%@ is BObject", className);
     }
 }
