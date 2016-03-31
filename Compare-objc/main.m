@@ -141,6 +141,25 @@ void description(id obj) {
     }
     
     
+#pragma mark [NSObject superclass] == [NSObject class]
+    
+    // EN: Compare of the super class object.
+    // JP: スーパークラスオブジェクトの比較
+    
+    if ([obj superclass] == [NSObject class]) {
+        DLog(@"Superclass of %@ is NSObject", className);
+    }
+    if ([obj superclass] == [NSString class]) {
+        DLog(@"Superclass of %@ is NSString", className);
+    }
+    if ([obj superclass] == [AObject class]) {
+        DLog(@"Superclass of %@ is AObject", className);
+    }
+    if ([obj superclass] == [BObject class]) {
+        DLog(@"Superclass of %@ is BObject", className);
+    }
+    
+    
 #pragma mark [NSObject isEqual:]
     
     // EN: Compare of the instance by 'isEqual'.
@@ -239,132 +258,137 @@ void description(id obj) {
 }
 
 /**
- 2016-03-31 11:32:31.748 Compare-objc[53017:2336567] ================ nil object ================
- 2016-03-31 11:32:31.749 Compare-objc[53017:2336567] void description(__strong id) [Line 152] (null) is not equal (null)
- 2016-03-31 11:32:31.749 Compare-objc[53017:2336567] void description(__strong id) [Line 162] (null) is (null)
- 2016-03-31 11:32:31.749 Compare-objc[53017:2336567] void description(__strong id) [Line 152] (null) is not equal (null)
- 2016-03-31 11:32:31.749 Compare-objc[53017:2336567] void description(__strong id) [Line 162] (null) is (null)
- 2016-03-31 11:32:31.749 Compare-objc[53017:2336567] void description(__strong id) [Line 152] (null) is not equal (null)
- 2016-03-31 11:32:31.749 Compare-objc[53017:2336567] void description(__strong id) [Line 162] (null) is (null)
- 2016-03-31 11:32:31.749 Compare-objc[53017:2336567] void description(__strong id) [Line 152] (null) is not equal (null)
- 2016-03-31 11:32:31.749 Compare-objc[53017:2336567] void description(__strong id) [Line 162] (null) is (null)
- 2016-03-31 11:32:31.749 Compare-objc[53017:2336567] ================ alloc Object ================
- 2016-03-31 11:32:31.750 Compare-objc[53017:2336567] void description(__strong id) [Line 74] NSObject is kind of NSObject
- 2016-03-31 11:32:31.750 Compare-objc[53017:2336567] void description(__strong id) [Line 93] NSObject is member of NSObject
- 2016-03-31 11:32:31.750 Compare-objc[53017:2336567] void description(__strong id) [Line 112] NSObject is subclass of NSObject
- 2016-03-31 11:32:31.750 Compare-objc[53017:2336567] void description(__strong id) [Line 131] NSObject is NSObject
- 2016-03-31 11:32:31.750 Compare-objc[53017:2336567] void description(__strong id) [Line 150] NSObject is equal NSObject
- 2016-03-31 11:32:31.751 Compare-objc[53017:2336567] void description(__strong id) [Line 162] NSObject is NSObject
- 2016-03-31 11:32:31.751 Compare-objc[53017:2336567] void description(__strong id) [Line 174] NSObject conforms to protocol of NSObject.
- 2016-03-31 11:32:31.751 Compare-objc[53017:2336567] void description(__strong id) [Line 193] NSObject responds to selector of (class method) copy.
- 2016-03-31 11:32:31.751 Compare-objc[53017:2336567] void description(__strong id) [Line 209] NSObject responds to selector of (instance method) copy.
- 2016-03-31 11:32:31.751 Compare-objc[53017:2336567] void description(__strong id) [Line 228] NSObject instances Respond To Selector of (instance method) copy.
- 2016-03-31 11:32:31.751 Compare-objc[53017:2336567] void description(__strong id) [Line 74] NSPlaceholderString is kind of NSObject
- 2016-03-31 11:32:31.751 Compare-objc[53017:2336567] void description(__strong id) [Line 77] NSPlaceholderString is kind of NSString
- 2016-03-31 11:32:31.751 Compare-objc[53017:2336567] void description(__strong id) [Line 112] NSPlaceholderString is subclass of NSObject
- 2016-03-31 11:32:31.751 Compare-objc[53017:2336567] void description(__strong id) [Line 115] NSPlaceholderString is subclass of NSString
- 2016-03-31 11:32:31.751 Compare-objc[53017:2336567] void description(__strong id) [Line 150] NSPlaceholderString is equal NSPlaceholderString
- 2016-03-31 11:32:31.752 Compare-objc[53017:2336567] void description(__strong id) [Line 162] NSPlaceholderString is NSPlaceholderString
- 2016-03-31 11:32:31.752 Compare-objc[53017:2336567] void description(__strong id) [Line 174] NSPlaceholderString conforms to protocol of NSObject.
- 2016-03-31 11:32:31.752 Compare-objc[53017:2336567] void description(__strong id) [Line 177] NSPlaceholderString conforms to protocol of NSCopying and NSMutableCopying, NSSecureCoding.
- 2016-03-31 11:32:31.752 Compare-objc[53017:2336567] void description(__strong id) [Line 193] NSPlaceholderString responds to selector of (class method) copy.
- 2016-03-31 11:32:31.752 Compare-objc[53017:2336567] void description(__strong id) [Line 209] NSPlaceholderString responds to selector of (instance method) copy.
- 2016-03-31 11:32:31.752 Compare-objc[53017:2336567] void description(__strong id) [Line 212] NSPlaceholderString responds to selector of (instance method) length.
- 2016-03-31 11:32:31.752 Compare-objc[53017:2336567] void description(__strong id) [Line 228] NSPlaceholderString instances Respond To Selector of (instance method) copy.
- 2016-03-31 11:32:31.752 Compare-objc[53017:2336567] void description(__strong id) [Line 231] NSPlaceholderString instances Respond To Selector of (instance method) length.
- 2016-03-31 11:32:31.752 Compare-objc[53017:2336567] void description(__strong id) [Line 74] AObject is kind of NSObject
- 2016-03-31 11:32:31.752 Compare-objc[53017:2336567] void description(__strong id) [Line 80] AObject is kind of AObject
- 2016-03-31 11:32:31.752 Compare-objc[53017:2336567] void description(__strong id) [Line 99] AObject is member of AObject
- 2016-03-31 11:32:31.752 Compare-objc[53017:2336567] void description(__strong id) [Line 112] AObject is subclass of NSObject
- 2016-03-31 11:32:31.753 Compare-objc[53017:2336567] void description(__strong id) [Line 118] AObject is subclass of AObject
- 2016-03-31 11:32:31.753 Compare-objc[53017:2336567] void description(__strong id) [Line 137] AObject is AObject
- 2016-03-31 11:32:31.753 Compare-objc[53017:2336567] void description(__strong id) [Line 150] AObject is equal AObject
- 2016-03-31 11:32:31.753 Compare-objc[53017:2336567] void description(__strong id) [Line 162] AObject is AObject
- 2016-03-31 11:32:31.753 Compare-objc[53017:2336567] void description(__strong id) [Line 174] AObject conforms to protocol of NSObject.
- 2016-03-31 11:32:31.753 Compare-objc[53017:2336567] void description(__strong id) [Line 180] AObject conforms to protocol of AProtocol.
- 2016-03-31 11:32:31.753 Compare-objc[53017:2336567] void description(__strong id) [Line 193] AObject responds to selector of (class method) copy.
- 2016-03-31 11:32:31.753 Compare-objc[53017:2336567] void description(__strong id) [Line 209] AObject responds to selector of (instance method) copy.
- 2016-03-31 11:32:31.753 Compare-objc[53017:2336567] void description(__strong id) [Line 215] AObject responds to selector of (instance method) aMethod.
- 2016-03-31 11:32:31.753 Compare-objc[53017:2336567] void description(__strong id) [Line 228] AObject instances Respond To Selector of (instance method) copy.
- 2016-03-31 11:32:31.753 Compare-objc[53017:2336567] void description(__strong id) [Line 234] AObject instances Respond To Selector of (instance method) aMethod.
- 2016-03-31 11:32:31.753 Compare-objc[53017:2336567] void description(__strong id) [Line 74] BObject is kind of NSObject
- 2016-03-31 11:32:31.753 Compare-objc[53017:2336567] void description(__strong id) [Line 80] BObject is kind of AObject
- 2016-03-31 11:32:31.753 Compare-objc[53017:2336567] void description(__strong id) [Line 83] BObject is kind of BObject
- 2016-03-31 11:32:31.753 Compare-objc[53017:2336567] void description(__strong id) [Line 102] BObject is member of BObject
- 2016-03-31 11:32:31.753 Compare-objc[53017:2336567] void description(__strong id) [Line 112] BObject is subclass of NSObject
- 2016-03-31 11:32:31.754 Compare-objc[53017:2336567] void description(__strong id) [Line 118] BObject is subclass of AObject
- 2016-03-31 11:32:31.754 Compare-objc[53017:2336567] void description(__strong id) [Line 121] BObject is subclass of BObject
- 2016-03-31 11:32:31.754 Compare-objc[53017:2336567] void description(__strong id) [Line 140] BObject is BObject
- 2016-03-31 11:32:31.754 Compare-objc[53017:2336567] void description(__strong id) [Line 150] BObject is equal BObject
- 2016-03-31 11:32:31.754 Compare-objc[53017:2336567] void description(__strong id) [Line 162] BObject is BObject
- 2016-03-31 11:32:31.754 Compare-objc[53017:2336567] void description(__strong id) [Line 174] BObject conforms to protocol of NSObject.
- 2016-03-31 11:32:31.754 Compare-objc[53017:2336567] void description(__strong id) [Line 180] BObject conforms to protocol of AProtocol.
- 2016-03-31 11:32:31.754 Compare-objc[53017:2336567] void description(__strong id) [Line 183] BObject conforms to protocol of BProtocol.
- 2016-03-31 11:32:31.754 Compare-objc[53017:2336567] void description(__strong id) [Line 193] BObject responds to selector of (class method) copy.
- 2016-03-31 11:32:31.754 Compare-objc[53017:2336567] void description(__strong id) [Line 209] BObject responds to selector of (instance method) copy.
- 2016-03-31 11:32:31.754 Compare-objc[53017:2336567] void description(__strong id) [Line 215] BObject responds to selector of (instance method) aMethod.
- 2016-03-31 11:32:31.754 Compare-objc[53017:2336567] void description(__strong id) [Line 218] BObject responds to selector of (instance method) bMethod.
- 2016-03-31 11:32:31.755 Compare-objc[53017:2336567] void description(__strong id) [Line 228] BObject instances Respond To Selector of (instance method) copy.
- 2016-03-31 11:32:31.755 Compare-objc[53017:2336567] void description(__strong id) [Line 234] BObject instances Respond To Selector of (instance method) aMethod.
- 2016-03-31 11:32:31.755 Compare-objc[53017:2336567] void description(__strong id) [Line 237] BObject instances Respond To Selector of (instance method) bMethod.
- 2016-03-31 11:32:31.755 Compare-objc[53017:2336567] ================ initialize Object ================
- 2016-03-31 11:32:31.755 Compare-objc[53017:2336567] void description(__strong id) [Line 74] NSObject is kind of NSObject
- 2016-03-31 11:32:31.755 Compare-objc[53017:2336567] void description(__strong id) [Line 93] NSObject is member of NSObject
- 2016-03-31 11:32:31.755 Compare-objc[53017:2336567] void description(__strong id) [Line 112] NSObject is subclass of NSObject
- 2016-03-31 11:32:31.755 Compare-objc[53017:2336567] void description(__strong id) [Line 131] NSObject is NSObject
- 2016-03-31 11:32:31.755 Compare-objc[53017:2336567] void description(__strong id) [Line 150] NSObject is equal NSObject
- 2016-03-31 11:32:31.755 Compare-objc[53017:2336567] void description(__strong id) [Line 162] NSObject is NSObject
- 2016-03-31 11:32:31.755 Compare-objc[53017:2336567] void description(__strong id) [Line 174] NSObject conforms to protocol of NSObject.
- 2016-03-31 11:32:31.755 Compare-objc[53017:2336567] void description(__strong id) [Line 193] NSObject responds to selector of (class method) copy.
- 2016-03-31 11:32:31.755 Compare-objc[53017:2336567] void description(__strong id) [Line 209] NSObject responds to selector of (instance method) copy.
- 2016-03-31 11:32:31.755 Compare-objc[53017:2336567] void description(__strong id) [Line 228] NSObject instances Respond To Selector of (instance method) copy.
- 2016-03-31 11:32:31.756 Compare-objc[53017:2336567] void description(__strong id) [Line 74] __NSCFConstantString is kind of NSObject
- 2016-03-31 11:32:31.756 Compare-objc[53017:2336567] void description(__strong id) [Line 77] __NSCFConstantString is kind of NSString
- 2016-03-31 11:32:31.756 Compare-objc[53017:2336567] void description(__strong id) [Line 112] __NSCFConstantString is subclass of NSObject
- 2016-03-31 11:32:31.756 Compare-objc[53017:2336567] void description(__strong id) [Line 115] __NSCFConstantString is subclass of NSString
- 2016-03-31 11:32:31.756 Compare-objc[53017:2336567] void description(__strong id) [Line 150] __NSCFConstantString is equal __NSCFConstantString
- 2016-03-31 11:32:31.756 Compare-objc[53017:2336567] void description(__strong id) [Line 162] __NSCFConstantString is __NSCFConstantString
- 2016-03-31 11:32:31.756 Compare-objc[53017:2336567] void description(__strong id) [Line 174] __NSCFConstantString conforms to protocol of NSObject.
- 2016-03-31 11:32:31.756 Compare-objc[53017:2336567] void description(__strong id) [Line 177] __NSCFConstantString conforms to protocol of NSCopying and NSMutableCopying, NSSecureCoding.
- 2016-03-31 11:32:31.756 Compare-objc[53017:2336567] void description(__strong id) [Line 193] __NSCFConstantString responds to selector of (class method) copy.
- 2016-03-31 11:32:31.756 Compare-objc[53017:2336567] void description(__strong id) [Line 209] __NSCFConstantString responds to selector of (instance method) copy.
- 2016-03-31 11:32:31.756 Compare-objc[53017:2336567] void description(__strong id) [Line 212] __NSCFConstantString responds to selector of (instance method) length.
- 2016-03-31 11:32:31.756 Compare-objc[53017:2336567] void description(__strong id) [Line 228] __NSCFConstantString instances Respond To Selector of (instance method) copy.
- 2016-03-31 11:32:31.756 Compare-objc[53017:2336567] void description(__strong id) [Line 231] __NSCFConstantString instances Respond To Selector of (instance method) length.
- 2016-03-31 11:32:31.757 Compare-objc[53017:2336567] void description(__strong id) [Line 74] AObject is kind of NSObject
- 2016-03-31 11:32:31.757 Compare-objc[53017:2336567] void description(__strong id) [Line 80] AObject is kind of AObject
- 2016-03-31 11:32:31.757 Compare-objc[53017:2336567] void description(__strong id) [Line 99] AObject is member of AObject
- 2016-03-31 11:32:31.757 Compare-objc[53017:2336567] void description(__strong id) [Line 112] AObject is subclass of NSObject
- 2016-03-31 11:32:31.757 Compare-objc[53017:2336567] void description(__strong id) [Line 118] AObject is subclass of AObject
- 2016-03-31 11:32:31.757 Compare-objc[53017:2336567] void description(__strong id) [Line 137] AObject is AObject
- 2016-03-31 11:32:31.757 Compare-objc[53017:2336567] void description(__strong id) [Line 150] AObject is equal AObject
- 2016-03-31 11:32:31.757 Compare-objc[53017:2336567] void description(__strong id) [Line 162] AObject is AObject
- 2016-03-31 11:32:31.757 Compare-objc[53017:2336567] void description(__strong id) [Line 174] AObject conforms to protocol of NSObject.
- 2016-03-31 11:32:31.757 Compare-objc[53017:2336567] void description(__strong id) [Line 180] AObject conforms to protocol of AProtocol.
- 2016-03-31 11:32:31.758 Compare-objc[53017:2336567] void description(__strong id) [Line 193] AObject responds to selector of (class method) copy.
- 2016-03-31 11:32:31.758 Compare-objc[53017:2336567] void description(__strong id) [Line 209] AObject responds to selector of (instance method) copy.
- 2016-03-31 11:32:31.758 Compare-objc[53017:2336567] void description(__strong id) [Line 215] AObject responds to selector of (instance method) aMethod.
- 2016-03-31 11:32:31.758 Compare-objc[53017:2336567] void description(__strong id) [Line 228] AObject instances Respond To Selector of (instance method) copy.
- 2016-03-31 11:32:31.758 Compare-objc[53017:2336567] void description(__strong id) [Line 234] AObject instances Respond To Selector of (instance method) aMethod.
- 2016-03-31 11:32:31.758 Compare-objc[53017:2336567] void description(__strong id) [Line 74] BObject is kind of NSObject
- 2016-03-31 11:32:31.758 Compare-objc[53017:2336567] void description(__strong id) [Line 80] BObject is kind of AObject
- 2016-03-31 11:32:31.758 Compare-objc[53017:2336567] void description(__strong id) [Line 83] BObject is kind of BObject
- 2016-03-31 11:32:31.758 Compare-objc[53017:2336567] void description(__strong id) [Line 102] BObject is member of BObject
- 2016-03-31 11:32:31.758 Compare-objc[53017:2336567] void description(__strong id) [Line 112] BObject is subclass of NSObject
- 2016-03-31 11:32:31.758 Compare-objc[53017:2336567] void description(__strong id) [Line 118] BObject is subclass of AObject
- 2016-03-31 11:32:31.759 Compare-objc[53017:2336567] void description(__strong id) [Line 121] BObject is subclass of BObject
- 2016-03-31 11:32:31.759 Compare-objc[53017:2336567] void description(__strong id) [Line 140] BObject is BObject
- 2016-03-31 11:32:31.759 Compare-objc[53017:2336567] void description(__strong id) [Line 150] BObject is equal BObject
- 2016-03-31 11:32:31.759 Compare-objc[53017:2336567] void description(__strong id) [Line 162] BObject is BObject
- 2016-03-31 11:32:31.759 Compare-objc[53017:2336567] void description(__strong id) [Line 174] BObject conforms to protocol of NSObject.
- 2016-03-31 11:32:31.759 Compare-objc[53017:2336567] void description(__strong id) [Line 180] BObject conforms to protocol of AProtocol.
- 2016-03-31 11:32:31.759 Compare-objc[53017:2336567] void description(__strong id) [Line 183] BObject conforms to protocol of BProtocol.
- 2016-03-31 11:32:31.759 Compare-objc[53017:2336567] void description(__strong id) [Line 193] BObject responds to selector of (class method) copy.
- 2016-03-31 11:32:31.759 Compare-objc[53017:2336567] void description(__strong id) [Line 209] BObject responds to selector of (instance method) copy.
- 2016-03-31 11:32:31.759 Compare-objc[53017:2336567] void description(__strong id) [Line 215] BObject responds to selector of (instance method) aMethod.
- 2016-03-31 11:32:31.759 Compare-objc[53017:2336567] void description(__strong id) [Line 218] BObject responds to selector of (instance method) bMethod.
- 2016-03-31 11:32:31.759 Compare-objc[53017:2336567] void description(__strong id) [Line 228] BObject instances Respond To Selector of (instance method) copy.
- 2016-03-31 11:32:31.760 Compare-objc[53017:2336567] void description(__strong id) [Line 234] BObject instances Respond To Selector of (instance method) aMethod.
- 2016-03-31 11:32:31.760 Compare-objc[53017:2336567] void description(__strong id) [Line 237] BObject instances Respond To Selector of (instance method) bMethod.
+ 2016-03-31 12:25:42.442 Compare-objc[53491:2353751] ================ nil object ================
+ 2016-03-31 12:25:42.443 Compare-objc[53491:2353751] void description(__strong id) [Line 171] (null) is not equal (null)
+ 2016-03-31 12:25:42.443 Compare-objc[53491:2353751] void description(__strong id) [Line 181] (null) is (null)
+ 2016-03-31 12:25:42.443 Compare-objc[53491:2353751] void description(__strong id) [Line 171] (null) is not equal (null)
+ 2016-03-31 12:25:42.443 Compare-objc[53491:2353751] void description(__strong id) [Line 181] (null) is (null)
+ 2016-03-31 12:25:42.443 Compare-objc[53491:2353751] void description(__strong id) [Line 171] (null) is not equal (null)
+ 2016-03-31 12:25:42.443 Compare-objc[53491:2353751] void description(__strong id) [Line 181] (null) is (null)
+ 2016-03-31 12:25:42.443 Compare-objc[53491:2353751] void description(__strong id) [Line 171] (null) is not equal (null)
+ 2016-03-31 12:25:42.443 Compare-objc[53491:2353751] void description(__strong id) [Line 181] (null) is (null)
+ 2016-03-31 12:25:42.443 Compare-objc[53491:2353751] ================ alloc Object ================
+ 2016-03-31 12:25:42.444 Compare-objc[53491:2353751] void description(__strong id) [Line 74] NSObject is kind of NSObject
+ 2016-03-31 12:25:42.465 Compare-objc[53491:2353751] void description(__strong id) [Line 93] NSObject is member of NSObject
+ 2016-03-31 12:25:42.465 Compare-objc[53491:2353751] void description(__strong id) [Line 112] NSObject is subclass of NSObject
+ 2016-03-31 12:25:42.465 Compare-objc[53491:2353751] void description(__strong id) [Line 131] NSObject is NSObject
+ 2016-03-31 12:25:42.465 Compare-objc[53491:2353751] void description(__strong id) [Line 169] NSObject is equal NSObject
+ 2016-03-31 12:25:42.465 Compare-objc[53491:2353751] void description(__strong id) [Line 181] NSObject is NSObject
+ 2016-03-31 12:25:42.466 Compare-objc[53491:2353751] void description(__strong id) [Line 193] NSObject conforms to protocol of NSObject.
+ 2016-03-31 12:25:42.466 Compare-objc[53491:2353751] void description(__strong id) [Line 212] NSObject responds to selector of (class method) copy.
+ 2016-03-31 12:25:42.466 Compare-objc[53491:2353751] void description(__strong id) [Line 228] NSObject responds to selector of (instance method) copy.
+ 2016-03-31 12:25:42.500 Compare-objc[53491:2353751] void description(__strong id) [Line 247] NSObject instances Respond To Selector of (instance method) copy.
+ 2016-03-31 12:25:42.500 Compare-objc[53491:2353751] void description(__strong id) [Line 74] NSPlaceholderString is kind of NSObject
+ 2016-03-31 12:25:42.500 Compare-objc[53491:2353751] void description(__strong id) [Line 77] NSPlaceholderString is kind of NSString
+ 2016-03-31 12:25:42.500 Compare-objc[53491:2353751] void description(__strong id) [Line 112] NSPlaceholderString is subclass of NSObject
+ 2016-03-31 12:25:42.500 Compare-objc[53491:2353751] void description(__strong id) [Line 115] NSPlaceholderString is subclass of NSString
+ 2016-03-31 12:25:42.501 Compare-objc[53491:2353751] void description(__strong id) [Line 153] Superclass of NSPlaceholderString is NSString
+ 2016-03-31 12:25:42.501 Compare-objc[53491:2353751] void description(__strong id) [Line 169] NSPlaceholderString is equal NSPlaceholderString
+ 2016-03-31 12:25:42.608 Compare-objc[53491:2353751] void description(__strong id) [Line 181] NSPlaceholderString is NSPlaceholderString
+ 2016-03-31 12:25:42.608 Compare-objc[53491:2353751] void description(__strong id) [Line 193] NSPlaceholderString conforms to protocol of NSObject.
+ 2016-03-31 12:25:42.608 Compare-objc[53491:2353751] void description(__strong id) [Line 196] NSPlaceholderString conforms to protocol of NSCopying and NSMutableCopying, NSSecureCoding.
+ 2016-03-31 12:25:42.608 Compare-objc[53491:2353751] void description(__strong id) [Line 212] NSPlaceholderString responds to selector of (class method) copy.
+ 2016-03-31 12:25:42.608 Compare-objc[53491:2353751] void description(__strong id) [Line 228] NSPlaceholderString responds to selector of (instance method) copy.
+ 2016-03-31 12:25:42.608 Compare-objc[53491:2353751] void description(__strong id) [Line 231] NSPlaceholderString responds to selector of (instance method) length.
+ 2016-03-31 12:25:42.616 Compare-objc[53491:2353751] void description(__strong id) [Line 247] NSPlaceholderString instances Respond To Selector of (instance method) copy.
+ 2016-03-31 12:25:42.616 Compare-objc[53491:2353751] void description(__strong id) [Line 250] NSPlaceholderString instances Respond To Selector of (instance method) length.
+ 2016-03-31 12:25:42.616 Compare-objc[53491:2353751] void description(__strong id) [Line 74] AObject is kind of NSObject
+ 2016-03-31 12:25:42.616 Compare-objc[53491:2353751] void description(__strong id) [Line 80] AObject is kind of AObject
+ 2016-03-31 12:25:42.616 Compare-objc[53491:2353751] void description(__strong id) [Line 99] AObject is member of AObject
+ 2016-03-31 12:25:42.616 Compare-objc[53491:2353751] void description(__strong id) [Line 112] AObject is subclass of NSObject
+ 2016-03-31 12:25:42.616 Compare-objc[53491:2353751] void description(__strong id) [Line 118] AObject is subclass of AObject
+ 2016-03-31 12:25:42.617 Compare-objc[53491:2353751] void description(__strong id) [Line 137] AObject is AObject
+ 2016-03-31 12:25:42.648 Compare-objc[53491:2353751] void description(__strong id) [Line 150] Superclass of AObject is NSObject
+ 2016-03-31 12:25:42.649 Compare-objc[53491:2353751] void description(__strong id) [Line 169] AObject is equal AObject
+ 2016-03-31 12:25:42.650 Compare-objc[53491:2353751] void description(__strong id) [Line 181] AObject is AObject
+ 2016-03-31 12:25:42.650 Compare-objc[53491:2353751] void description(__strong id) [Line 193] AObject conforms to protocol of NSObject.
+ 2016-03-31 12:25:42.650 Compare-objc[53491:2353751] void description(__strong id) [Line 199] AObject conforms to protocol of AProtocol.
+ 2016-03-31 12:25:42.650 Compare-objc[53491:2353751] void description(__strong id) [Line 212] AObject responds to selector of (class method) copy.
+ 2016-03-31 12:25:42.651 Compare-objc[53491:2353751] void description(__strong id) [Line 228] AObject responds to selector of (instance method) copy.
+ 2016-03-31 12:25:42.651 Compare-objc[53491:2353751] void description(__strong id) [Line 234] AObject responds to selector of (instance method) aMethod.
+ 2016-03-31 12:25:42.674 Compare-objc[53491:2353751] void description(__strong id) [Line 247] AObject instances Respond To Selector of (instance method) copy.
+ 2016-03-31 12:25:42.674 Compare-objc[53491:2353751] void description(__strong id) [Line 253] AObject instances Respond To Selector of (instance method) aMethod.
+ 2016-03-31 12:25:42.674 Compare-objc[53491:2353751] void description(__strong id) [Line 74] BObject is kind of NSObject
+ 2016-03-31 12:25:42.674 Compare-objc[53491:2353751] void description(__strong id) [Line 80] BObject is kind of AObject
+ 2016-03-31 12:25:42.674 Compare-objc[53491:2353751] void description(__strong id) [Line 83] BObject is kind of BObject
+ 2016-03-31 12:25:42.674 Compare-objc[53491:2353751] void description(__strong id) [Line 102] BObject is member of BObject
+ 2016-03-31 12:25:42.674 Compare-objc[53491:2353751] void description(__strong id) [Line 112] BObject is subclass of NSObject
+ 2016-03-31 12:25:42.674 Compare-objc[53491:2353751] void description(__strong id) [Line 118] BObject is subclass of AObject
+ 2016-03-31 12:25:42.681 Compare-objc[53491:2353751] void description(__strong id) [Line 121] BObject is subclass of BObject
+ 2016-03-31 12:25:42.681 Compare-objc[53491:2353751] void description(__strong id) [Line 140] BObject is BObject
+ 2016-03-31 12:25:42.681 Compare-objc[53491:2353751] void description(__strong id) [Line 156] Superclass of BObject is AObject
+ 2016-03-31 12:25:42.681 Compare-objc[53491:2353751] void description(__strong id) [Line 169] BObject is equal BObject
+ 2016-03-31 12:25:42.682 Compare-objc[53491:2353751] void description(__strong id) [Line 181] BObject is BObject
+ 2016-03-31 12:25:42.682 Compare-objc[53491:2353751] void description(__strong id) [Line 193] BObject conforms to protocol of NSObject.
+ 2016-03-31 12:25:42.682 Compare-objc[53491:2353751] void description(__strong id) [Line 199] BObject conforms to protocol of AProtocol.
+ 2016-03-31 12:25:42.682 Compare-objc[53491:2353751] void description(__strong id) [Line 202] BObject conforms to protocol of BProtocol.
+ 2016-03-31 12:25:42.713 Compare-objc[53491:2353751] void description(__strong id) [Line 212] BObject responds to selector of (class method) copy.
+ 2016-03-31 12:25:42.714 Compare-objc[53491:2353751] void description(__strong id) [Line 228] BObject responds to selector of (instance method) copy.
+ 2016-03-31 12:25:42.714 Compare-objc[53491:2353751] void description(__strong id) [Line 234] BObject responds to selector of (instance method) aMethod.
+ 2016-03-31 12:25:42.714 Compare-objc[53491:2353751] void description(__strong id) [Line 237] BObject responds to selector of (instance method) bMethod.
+ 2016-03-31 12:25:42.714 Compare-objc[53491:2353751] void description(__strong id) [Line 247] BObject instances Respond To Selector of (instance method) copy.
+ 2016-03-31 12:25:42.714 Compare-objc[53491:2353751] void description(__strong id) [Line 253] BObject instances Respond To Selector of (instance method) aMethod.
+ 2016-03-31 12:25:42.714 Compare-objc[53491:2353751] void description(__strong id) [Line 256] BObject instances Respond To Selector of (instance method) bMethod.
+ 2016-03-31 12:25:42.740 Compare-objc[53491:2353751] ================ initialize Object ================
+ 2016-03-31 12:25:42.740 Compare-objc[53491:2353751] void description(__strong id) [Line 74] NSObject is kind of NSObject
+ 2016-03-31 12:25:42.740 Compare-objc[53491:2353751] void description(__strong id) [Line 93] NSObject is member of NSObject
+ 2016-03-31 12:25:42.740 Compare-objc[53491:2353751] void description(__strong id) [Line 112] NSObject is subclass of NSObject
+ 2016-03-31 12:25:42.740 Compare-objc[53491:2353751] void description(__strong id) [Line 131] NSObject is NSObject
+ 2016-03-31 12:25:42.740 Compare-objc[53491:2353751] void description(__strong id) [Line 169] NSObject is equal NSObject
+ 2016-03-31 12:25:42.740 Compare-objc[53491:2353751] void description(__strong id) [Line 181] NSObject is NSObject
+ 2016-03-31 12:25:42.740 Compare-objc[53491:2353751] void description(__strong id) [Line 193] NSObject conforms to protocol of NSObject.
+ 2016-03-31 12:25:42.741 Compare-objc[53491:2353751] void description(__strong id) [Line 212] NSObject responds to selector of (class method) copy.
+ 2016-03-31 12:25:42.742 Compare-objc[53491:2353751] void description(__strong id) [Line 228] NSObject responds to selector of (instance method) copy.
+ 2016-03-31 12:25:42.742 Compare-objc[53491:2353751] void description(__strong id) [Line 247] NSObject instances Respond To Selector of (instance method) copy.
+ 2016-03-31 12:25:42.742 Compare-objc[53491:2353751] void description(__strong id) [Line 74] __NSCFConstantString is kind of NSObject
+ 2016-03-31 12:25:42.742 Compare-objc[53491:2353751] void description(__strong id) [Line 77] __NSCFConstantString is kind of NSString
+ 2016-03-31 12:25:42.742 Compare-objc[53491:2353751] void description(__strong id) [Line 112] __NSCFConstantString is subclass of NSObject
+ 2016-03-31 12:25:42.742 Compare-objc[53491:2353751] void description(__strong id) [Line 115] __NSCFConstantString is subclass of NSString
+ 2016-03-31 12:25:42.742 Compare-objc[53491:2353751] void description(__strong id) [Line 169] __NSCFConstantString is equal __NSCFConstantString
+ 2016-03-31 12:25:42.742 Compare-objc[53491:2353751] void description(__strong id) [Line 181] __NSCFConstantString is __NSCFConstantString
+ 2016-03-31 12:25:42.742 Compare-objc[53491:2353751] void description(__strong id) [Line 193] __NSCFConstantString conforms to protocol of NSObject.
+ 2016-03-31 12:25:42.742 Compare-objc[53491:2353751] void description(__strong id) [Line 196] __NSCFConstantString conforms to protocol of NSCopying and NSMutableCopying, NSSecureCoding.
+ 2016-03-31 12:25:42.742 Compare-objc[53491:2353751] void description(__strong id) [Line 212] __NSCFConstantString responds to selector of (class method) copy.
+ 2016-03-31 12:25:42.751 Compare-objc[53491:2353751] void description(__strong id) [Line 228] __NSCFConstantString responds to selector of (instance method) copy.
+ 2016-03-31 12:25:42.752 Compare-objc[53491:2353751] void description(__strong id) [Line 231] __NSCFConstantString responds to selector of (instance method) length.
+ 2016-03-31 12:25:42.752 Compare-objc[53491:2353751] void description(__strong id) [Line 247] __NSCFConstantString instances Respond To Selector of (instance method) copy.
+ 2016-03-31 12:25:42.752 Compare-objc[53491:2353751] void description(__strong id) [Line 250] __NSCFConstantString instances Respond To Selector of (instance method) length.
+ 2016-03-31 12:25:42.752 Compare-objc[53491:2353751] void description(__strong id) [Line 74] AObject is kind of NSObject
+ 2016-03-31 12:25:42.752 Compare-objc[53491:2353751] void description(__strong id) [Line 80] AObject is kind of AObject
+ 2016-03-31 12:25:42.752 Compare-objc[53491:2353751] void description(__strong id) [Line 99] AObject is member of AObject
+ 2016-03-31 12:25:42.778 Compare-objc[53491:2353751] void description(__strong id) [Line 112] AObject is subclass of NSObject
+ 2016-03-31 12:25:42.779 Compare-objc[53491:2353751] void description(__strong id) [Line 118] AObject is subclass of AObject
+ 2016-03-31 12:25:42.779 Compare-objc[53491:2353751] void description(__strong id) [Line 137] AObject is AObject
+ 2016-03-31 12:25:42.779 Compare-objc[53491:2353751] void description(__strong id) [Line 150] Superclass of AObject is NSObject
+ 2016-03-31 12:25:42.779 Compare-objc[53491:2353751] void description(__strong id) [Line 169] AObject is equal AObject
+ 2016-03-31 12:25:42.779 Compare-objc[53491:2353751] void description(__strong id) [Line 181] AObject is AObject
+ 2016-03-31 12:25:42.779 Compare-objc[53491:2353751] void description(__strong id) [Line 193] AObject conforms to protocol of NSObject.
+ 2016-03-31 12:25:42.780 Compare-objc[53491:2353751] void description(__strong id) [Line 199] AObject conforms to protocol of AProtocol.
+ 2016-03-31 12:25:42.780 Compare-objc[53491:2353751] void description(__strong id) [Line 212] AObject responds to selector of (class method) copy.
+ 2016-03-31 12:25:42.809 Compare-objc[53491:2353751] void description(__strong id) [Line 228] AObject responds to selector of (instance method) copy.
+ 2016-03-31 12:25:42.809 Compare-objc[53491:2353751] void description(__strong id) [Line 234] AObject responds to selector of (instance method) aMethod.
+ 2016-03-31 12:25:42.809 Compare-objc[53491:2353751] void description(__strong id) [Line 247] AObject instances Respond To Selector of (instance method) copy.
+ 2016-03-31 12:25:42.809 Compare-objc[53491:2353751] void description(__strong id) [Line 253] AObject instances Respond To Selector of (instance method) aMethod.
+ 2016-03-31 12:25:42.809 Compare-objc[53491:2353751] void description(__strong id) [Line 74] BObject is kind of NSObject
+ 2016-03-31 12:25:42.809 Compare-objc[53491:2353751] void description(__strong id) [Line 80] BObject is kind of AObject
+ 2016-03-31 12:25:42.809 Compare-objc[53491:2353751] void description(__strong id) [Line 83] BObject is kind of BObject
+ 2016-03-31 12:25:42.840 Compare-objc[53491:2353751] void description(__strong id) [Line 102] BObject is member of BObject
+ 2016-03-31 12:25:42.840 Compare-objc[53491:2353751] void description(__strong id) [Line 112] BObject is subclass of NSObject
+ 2016-03-31 12:25:42.840 Compare-objc[53491:2353751] void description(__strong id) [Line 118] BObject is subclass of AObject
+ 2016-03-31 12:25:42.840 Compare-objc[53491:2353751] void description(__strong id) [Line 121] BObject is subclass of BObject
+ 2016-03-31 12:25:42.840 Compare-objc[53491:2353751] void description(__strong id) [Line 140] BObject is BObject
+ 2016-03-31 12:25:42.840 Compare-objc[53491:2353751] void description(__strong id) [Line 156] Superclass of BObject is AObject
+ 2016-03-31 12:25:42.840 Compare-objc[53491:2353751] void description(__strong id) [Line 169] BObject is equal BObject
+ 2016-03-31 12:25:42.840 Compare-objc[53491:2353751] void description(__strong id) [Line 181] BObject is BObject
+ 2016-03-31 12:25:42.872 Compare-objc[53491:2353751] void description(__strong id) [Line 193] BObject conforms to protocol of NSObject.
+ 2016-03-31 12:25:42.872 Compare-objc[53491:2353751] void description(__strong id) [Line 199] BObject conforms to protocol of AProtocol.
+ 2016-03-31 12:25:42.872 Compare-objc[53491:2353751] void description(__strong id) [Line 202] BObject conforms to protocol of BProtocol.
+ 2016-03-31 12:25:42.872 Compare-objc[53491:2353751] void description(__strong id) [Line 212] BObject responds to selector of (class method) copy.
+ 2016-03-31 12:25:42.872 Compare-objc[53491:2353751] void description(__strong id) [Line 228] BObject responds to selector of (instance method) copy.
+ 2016-03-31 12:25:42.872 Compare-objc[53491:2353751] void description(__strong id) [Line 234] BObject responds to selector of (instance method) aMethod.
+ 2016-03-31 12:25:42.872 Compare-objc[53491:2353751] void description(__strong id) [Line 237] BObject responds to selector of (instance method) bMethod.
+ 2016-03-31 12:25:42.872 Compare-objc[53491:2353751] void description(__strong id) [Line 247] BObject instances Respond To Selector of (instance method) copy.
+ 2016-03-31 12:25:42.904 Compare-objc[53491:2353751] void description(__strong id) [Line 253] BObject instances Respond To Selector of (instance method) aMethod.
+ 2016-03-31 12:25:42.904 Compare-objc[53491:2353751] void description(__strong id) [Line 256] BObject instances Respond To Selector of (instance method) bMethod.
  Program ended with exit code: 0
  */
