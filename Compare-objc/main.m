@@ -241,7 +241,7 @@ void description(id obj) {
 #pragma mark [NSObject instancesRespondToSelector:]
     
     // EN: Whether instances of the receiver are capable of responding to a given selector.
-    // JP: 指定したセレクタに反応を示すインスタンスなのか。(インスタンスメソッドを実装または継承しているか)
+    // JP: 指定したセレクタに反応を示すインスタンスなのか(インスタンスメソッドを実装または継承しているか)
     
     if ([[obj class] instancesRespondToSelector:@selector(copy)]) {
         DLog(@"%@ instances Respond To Selector of (instance method) copy.", className);
