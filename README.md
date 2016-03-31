@@ -1,4 +1,4 @@
-#pragma mark [NSObject isKindOfClass:]
+#[NSObject isKindOfClass:]
     
     // EN: An instance of given class or an instance of any class that inherits from that class.
     // JP: 指定したクラスのインスタンスまたは、そのクラスを継承するクラスのインスタンス
@@ -17,7 +17,7 @@
     }
     
     
-#pragma mark [NSObject isMemberOfClass:]
+#[NSObject isMemberOfClass:]
     
     // EN: An instance of a given class.
     // JP: 指定したクラスのインスタンス
@@ -36,7 +36,7 @@
     }
     
     
-#pragma mark [NSObject isSubclassOfClass:]
+#[NSObject isSubclassOfClass:]
     
     // EN: A subclass of, or identical to, a given class.
     // JP: サブクラスまたは、同一の指定したクラス
@@ -55,7 +55,7 @@
     }
     
     
-#pragma mark [NSObject class] == [NSObject class]
+#[NSObject class] == [NSObject class]
     
     // EN: Compare of the class object.
     // JP: クラスオブジェクトの比較
@@ -74,7 +74,7 @@
     }
     
     
-#pragma mark [NSObject superclass] == [NSObject class]
+#[NSObject superclass] == [NSObject class]
     
     // EN: Compare of the super class object.
     // JP: スーパークラスオブジェクトの比較
@@ -93,7 +93,7 @@
     }
     
     
-#pragma mark [NSObject isEqual:]
+#[NSObject isEqual:]
     
     // EN: Compare of the instance by 'isEqual'.
     // JP: 'isEqual'によるインスタンスの比較
@@ -105,7 +105,7 @@
     }
     
     
-#pragma mark instance == instance
+#instance == instance
     
     // EN: Compare of the instance by '=='.
     // JP: '=='によるインスタンスの比較
@@ -117,7 +117,7 @@
     }
     
     
-#pragma mark [NSObject conformsToProtocol:]
+#[NSObject conformsToProtocol:]
     
     // EN: Whether the receiver conforms to a given protocol.
     // JP: プロトコルに順応しているか
@@ -136,7 +136,7 @@
     }
     
     
-#pragma mark [NSObject respondsToSelector:]
+#[NSObject respondsToSelector:]
     
     // EN: Whether the receiver implements or inherits a class method.
     // JP: クラスメソッドを実装または継承しているか
@@ -171,7 +171,7 @@
     }
     
     
-#pragma mark [NSObject instancesRespondToSelector:]
+#[NSObject instancesRespondToSelector:]
     
     // EN: Whether instances of the receiver are capable of responding to a given selector.
     // JP: 指定したセレクタに反応を示すインスタンスなのか。(インスタンスメソッドを実装または継承しているか)
