@@ -240,7 +240,7 @@ void description(id obj) {
     
 #pragma mark [NSObject instancesRespondToSelector:]
     
-    // EN: Whether instances of the receiver are capable of responding to a given selector.
+    // EN: Whether instances of the receiver are capable of responding to a given selector. (Whether the receiver implements or inherits a instance method.)
     // JP: 指定したセレクタに反応を示すインスタンスなのか(インスタンスメソッドを実装または継承しているか)
     
     if ([[obj class] instancesRespondToSelector:@selector(copy)]) {
